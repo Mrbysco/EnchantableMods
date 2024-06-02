@@ -1,0 +1,20 @@
+{
+  "values": [
+    "enchantableblocks:enchanted_force_furnace",
+    "enchantableblocks:enchanted_black_force_furnace",
+    "enchantableblocks:enchanted_blue_force_furnace",
+    "enchantableblocks:enchanted_brown_force_furnace",
+    "enchantableblocks:enchanted_cyan_force_furnace",
+    "enchantableblocks:enchanted_gray_force_furnace",
+    "enchantableblocks:enchanted_green_force_furnace",
+    "enchantableblocks:enchanted_light_blue_force_furnace",
+    "enchantableblocks:enchanted_light_gray_force_furnace",
+    "enchantableblocks:enchanted_lime_force_furnace",
+    "enchantableblocks:enchanted_magenta_force_furnace",
+    "enchantableblocks:enchanted_orange_force_furnace",
+    "enchantableblocks:enchanted_pink_force_furnace",
+    "enchantableblocks:enchanted_purple_force_furnace",
+    "enchantableblocks:enchanted_red_force_furnace",
+    "enchantableblocks:enchanted_white_force_furnace"
+  ]
+}
