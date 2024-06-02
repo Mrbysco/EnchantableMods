@@ -103,7 +103,7 @@ publishing {
             groupId project.group
             artifactId base.archivesName.get()
             version project.version
-//            from components.java
+            from components.java
         }
     }
     repositories {
@@ -133,8 +133,8 @@ if (System.getenv().CURSEFORGE_KEY) {
         mainFile.changelog = file("$project.rootDir/changelog.md")
         mainFile.changelogType = 'markdown'
 
-//        mainFile.addRequirement()
-//        mainFile.addOptional()
+        mainFile.addRequirement("enchantable-blocks")
+        mainFile.addOptional("forcecraft")
     }
 }
 
@@ -149,6 +149,11 @@ if (System.getenv().MODRINTH_KEY) {
         changelog = file("$project.rootDir/changelog.md").text
         gameVersions = ["${mc_version}"]
         loaders = ["neoforge"]
+
+        dependencies {
+            required.project "enchantable-blocks"
+            optional.project "forcecraft"
+        }
     }
 }
 
