@@ -4,7 +4,6 @@ import com.mojang.logging.LogUtils;
 import com.mrbysco.enchantableblocks.EnchantableBlocks;
 import com.mrbysco.enchantableblocks.util.BlockReplacement;
 import com.mrbysco.enchantablemods.client.ClientHandler;
-import com.mrbysco.enchantablemods.forcecraft.ForceCompat;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.InterModComms;
 import net.neoforged.fml.ModList;
@@ -25,8 +24,8 @@ public class EnchantableMods {
 		eventBus.addListener(this::sendImc);
 
 		if (ModList.get().isLoaded("forcecraft")) {
-			ForceCompat.BLOCKS.register(eventBus);
-			ForceCompat.BLOCK_ENTITY_TYPES.register(eventBus);
+			com.mrbysco.enchantablemods.forcecraft.ForceCompat.BLOCKS.register(eventBus);
+			com.mrbysco.enchantablemods.forcecraft.ForceCompat.BLOCK_ENTITY_TYPES.register(eventBus);
 		}
 
 		if (FMLEnvironment.dist.isClient()) {
@@ -37,7 +36,7 @@ public class EnchantableMods {
 	public void sendImc(InterModEnqueueEvent event) {
 		List<BlockReplacement> replacements = new ArrayList<>();
 		if (ModList.get().isLoaded("forcecraft")) {
-			ForceCompat.populateReplacements(replacements);
+			com.mrbysco.enchantablemods.forcecraft.ForceCompat.populateReplacements(replacements);
 		}
 		if (replacements.isEmpty()) {
 			LOGGER.warn("No replacements found. You don't have any compatible mods installed.");

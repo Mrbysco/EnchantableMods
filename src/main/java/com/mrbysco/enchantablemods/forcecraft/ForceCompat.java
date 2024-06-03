@@ -1,8 +1,11 @@
 package com.mrbysco.enchantablemods.forcecraft;
 
 import com.mrbysco.enchantableblocks.EnchantableBlocks;
+import com.mrbysco.enchantableblocks.util.BlockReplacement;
 import com.mrbysco.enchantablemods.forcecraft.block.EnchantedForceFurnaceBlock;
 import com.mrbysco.enchantablemods.forcecraft.blockentity.EnchantedForceFurnaceBlockEntity;
+import com.mrbysco.enchantablemods.util.EnchantableModTags;
+import com.mrbysco.forcecraft.registry.ForceRegistry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -10,6 +13,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public class ForceCompat {
@@ -44,4 +48,22 @@ public class ForceCompat {
 					ENCHANTED_PURPLE_FORCE_FURNACE.get(), ENCHANTED_RED_FORCE_FURNACE.get(),
 					ENCHANTED_WHITE_FORCE_FURNACE.get()).build(null));
 
+	public static void populateReplacements(List<BlockReplacement> replacements) {
+		replacements.add(new BlockReplacement(ForceRegistry.FORCE_FURNACE.get(), ForceCompat.ENCHANTED_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.BLACK_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_BLACK_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.BLUE_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_BLUE_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.BROWN_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_BROWN_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.CYAN_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_CYAN_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.GRAY_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_GRAY_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.GREEN_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_GREEN_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.LIGHT_BLUE_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_LIGHT_BLUE_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.LIGHT_GRAY_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_LIGHT_GRAY_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.LIME_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_LIME_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.MAGENTA_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_MAGENTA_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.ORANGE_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_ORANGE_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.PINK_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_PINK_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.PURPLE_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_PURPLE_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.RED_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_RED_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+		replacements.add(new BlockReplacement(ForceRegistry.WHITE_FORCE_FURNACE.get(), ForceCompat.ENCHANTED_WHITE_FORCE_FURNACE, EnchantableModTags.FORCE_FURNACE_APPLICABLE));
+	}
 }
