@@ -7,7 +7,7 @@ license="MIT"
 modId="enchantablemods"
 version="${file.jarVersion}"
 displayName="Enchantable Mods"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/enchantable-mods"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/enchantable-blocks-plus"
 authors="Mrbysco"
 description='''
 An addon to Enchantable Blocks that adds modded block enchanting support.
